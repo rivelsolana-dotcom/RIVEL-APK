@@ -1,45 +1,61 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0B0F1A] flex flex-col items-center justify-center text-white">
+    <main className="min-h-screen bg-black flex flex-col items-center justify-center text-white overflow-hidden">
 
-      {/* Círculo animado */}
-      <div className="relative flex items-center justify-center mb-10">
+      {/* LOGO RIVEL */}
+      <div className="mb-10 text-center">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
+          RIVEL
+        </h1>
+      </div>
 
-        <div className="w-64 h-64 rounded-full border border-gray-700 animate-spin-slow"></div>
+      {/* CÍRCULO */}
+      <div className="relative flex items-center justify-center">
 
-        {/* Monedas */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-blue-500 p-3 rounded-full">
-          ETH
+        {/* círculo animado */}
+        <div className="w-72 h-72 rounded-full border border-gray-800 animate-spin-slow"></div>
+
+        {/* ETH */}
+        <div className="absolute top-2 left-1/2 -translate-x-1/2 bg-blue-500 p-3 rounded-full shadow-lg">
+          <img
+            src="https://cryptologos.cc/logos/ethereum-eth-logo.png"
+            className="w-6"
+          />
         </div>
 
-        <div className="absolute bottom-0 left-0 bg-yellow-500 p-3 rounded-full">
-          BTC
+        {/* BTC */}
+        <div className="absolute bottom-2 left-4 bg-yellow-500 p-3 rounded-full shadow-lg">
+          <img
+            src="https://cryptologos.cc/logos/bitcoin-btc-logo.png"
+            className="w-6"
+          />
         </div>
 
-        <div className="absolute bottom-0 right-0 bg-yellow-300 p-3 rounded-full">
-          DOGE
+        {/* DOGE */}
+        <div className="absolute bottom-2 right-4 bg-yellow-400 p-3 rounded-full shadow-lg">
+          🐶
         </div>
 
-        {/* Centro */}
-        <div className="absolute bg-[#111827] w-32 h-32 rounded-xl flex items-center justify-center">
-          💰
+        {/* CENTRO */}
+        <div className="absolute w-40 h-40 bg-[#0B0F1A] rounded-2xl flex items-center justify-center shadow-inner">
+          <span className="text-3xl">💱</span>
         </div>
       </div>
 
-      {/* Texto */}
-      <div className="text-center px-6">
-        <h1 className="text-2xl font-bold">
+      {/* TEXTO */}
+      <div className="text-center mt-12 px-6">
+        <h2 className="text-2xl font-bold">
           <span className="text-blue-400">Quick and easy</span><br />
           coin exchange
-        </h1>
+        </h2>
 
         <p className="text-gray-400 mt-4">
           Bring your portfolio in keeping with current trends and coin swapping
         </p>
       </div>
 
-      {/* Botón */}
-      <button className="mt-10 bg-white text-black px-8 py-3 rounded-full font-bold">
+      {/* BOTÓN */}
+      <button className="mt-10 bg-white text-black px-10 py-3 rounded-full font-bold shadow-lg hover:scale-105 transition">
         Continue →
       </button>
 
