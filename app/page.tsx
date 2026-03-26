@@ -1,48 +1,48 @@
 export default function Home() {
-  const coins = [
-    { name: "Bitcoin", symbol: "BTC", price: "$15,633", color: "text-yellow-400" },
-    { name: "Ethereum", symbol: "ETH", price: "$20,713", color: "text-blue-400" },
-    { name: "Tether", symbol: "USDT", price: "$100", color: "text-green-400" },
-    { name: "Dogecoin", symbol: "DOGE", price: "$441", color: "text-yellow-300" },
-  ];
-
   return (
-    <main className="min-h-screen bg-[#0B0F1A] text-white flex justify-center items-center">
-      <div className="w-[360px] bg-[#111827] rounded-2xl p-5 shadow-xl">
+    <main className="min-h-screen bg-[#0B0F1A] flex flex-col items-center justify-center text-white">
 
-        {/* Header */}
-        <div className="mb-6">
-          <p className="text-gray-400 text-sm">My Wallet</p>
-          <h1 className="text-3xl font-bold">$46,142.45</h1>
+      {/* Círculo animado */}
+      <div className="relative flex items-center justify-center mb-10">
+
+        <div className="w-64 h-64 rounded-full border border-gray-700 animate-spin-slow"></div>
+
+        {/* Monedas */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-blue-500 p-3 rounded-full">
+          ETH
         </div>
 
-        {/* Buttons */}
-        <div className="grid grid-cols-3 gap-3 mb-6">
-          <button className="bg-gray-800 p-3 rounded-lg">Send</button>
-          <button className="bg-gray-800 p-3 rounded-lg">Swap</button>
-          <button className="bg-gray-800 p-3 rounded-lg">Receive</button>
+        <div className="absolute bottom-0 left-0 bg-yellow-500 p-3 rounded-full">
+          BTC
         </div>
 
-        {/* Portfolio */}
-        <div>
-          <h2 className="text-lg mb-3">Your Portfolio</h2>
-
-          {coins.map((coin, i) => (
-            <div
-              key={i}
-              className="flex justify-between items-center bg-[#1F2937] p-3 rounded-lg mb-2"
-            >
-              <div>
-                <p className={`font-bold ${coin.color}`}>{coin.name}</p>
-                <p className="text-gray-400 text-sm">{coin.symbol}</p>
-              </div>
-
-              <p className="font-bold">{coin.price}</p>
-            </div>
-          ))}
+        <div className="absolute bottom-0 right-0 bg-yellow-300 p-3 rounded-full">
+          DOGE
         </div>
 
+        {/* Centro */}
+        <div className="absolute bg-[#111827] w-32 h-32 rounded-xl flex items-center justify-center">
+          💰
+        </div>
       </div>
+
+      {/* Texto */}
+      <div className="text-center px-6">
+        <h1 className="text-2xl font-bold">
+          <span className="text-blue-400">Quick and easy</span><br />
+          coin exchange
+        </h1>
+
+        <p className="text-gray-400 mt-4">
+          Bring your portfolio in keeping with current trends and coin swapping
+        </p>
+      </div>
+
+      {/* Botón */}
+      <button className="mt-10 bg-white text-black px-8 py-3 rounded-full font-bold">
+        Continue →
+      </button>
+
     </main>
   );
 }
