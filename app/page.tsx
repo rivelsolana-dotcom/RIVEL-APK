@@ -29,19 +29,19 @@ export default function Home() {
         <div className="absolute w-[140px] h-[240px] bg-[#111827] rounded-3xl border border-gray-700 shadow-xl"></div>
 
         {/* BITCOIN */}
-        <div className="absolute left-[-50px] top-[140px] animate-bounce">
-          <Image src="/images/btc.png" alt="btc" width={60} height={60} />
-        </div>
+<div className="absolute left-[-60px] top-[140px] w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center shadow-xl animate-bounce">
+  <img src="/images/btc.png" className="w-8 h-8 object-contain" />
+</div>
 
-        {/* ETHEREUM */}
-        <div className="absolute top-[-40px] animate-bounce delay-200">
-          <Image src="/images/eth.png" alt="eth" width={60} height={60} />
-        </div>
+{/* ETHEREUM */}
+<div className="absolute top-[-50px] w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center shadow-xl animate-bounce delay-200">
+  <img src="/images/eth.png" className="w-8 h-8 object-contain" />
+</div>
 
-        {/* RIVEL FLOTANDO DERECHA */}
-        <div className="absolute right-[-50px] top-[140px] animate-bounce delay-500">
-          <Image src="/images/rivel.png" alt="rivel" width={60} height={60} />
-        </div>
+{/* RIVEL */}
+<div className="absolute right-[-60px] top-[140px] w-16 h-16 bg-gradient-to-tr from-purple-500 to-cyan-400 rounded-full flex items-center justify-center shadow-xl animate-bounce delay-500">
+  <img src="/images/rivel.png" className="w-8 h-8 object-contain" />
+</div>
 
       </div>
 
