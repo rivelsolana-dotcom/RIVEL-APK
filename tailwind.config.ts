@@ -1,18 +1,29 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-  extend: {
-    animation: {
-      'spin-slow': 'spin 20s linear infinite',
+    extend: {
+      animation: {
+        orbit: "orbit 10s linear infinite",
+      },
+      keyframes: {
+        orbit: {
+          "0%": {
+            transform: "rotate(0deg) translateX(140px) rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg) translateX(140px) rotate(-360deg)",
+          },
+        },
+      },
     },
   },
-},
   plugins: [],
-}
-export default config
+};
+
+export default config;
